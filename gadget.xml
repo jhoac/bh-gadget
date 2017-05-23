@@ -8,18 +8,19 @@
             <div>Test Email</div>
             <script type="text/javascript">
                 function subscribeEventCallback(calendarEvent) {
+                    console.log("Clicked");
+                    
                     var out;
                     if (!calendarEvent) {
-                        out = "Loading...";
+                        out = "Loading..."
+                        alert(out);
+                        document.write(out);
                     } else if (calendarEvent.attendeeCount <= 2) {
                         for (var attendee in calendarEvent.attendees) {
-                            if (attendee.email !== calendarEvent.owner.email) {
-                                out = attendee.email;
-                            }
+                            console.log(attendee.email);
+                            document.write(attendee.email);
                         }
                     }
-                    alert(out);
-                    document.write(out);
                 };
 
                 google.calendar.read.subscribeToEvents(subscribeEventCallback);
