@@ -19,10 +19,14 @@
         };
 
         document.write(produceMessage());
-        document.getElementsByClassName("details-button").addEventListener("click", function(){
-            alert("Hello World!");
-            document.write(grabEmailTitle());
-        });
+        var detailsButtons = document.getElementsByClassName("details-button");
+        
+        for(var button in detailsButtons) {
+            button.addEventListener("click", function() {
+                alert("Hello World!");
+                document.write(grabEmailTitle());
+            });
+        }
     </script>
   ]]>
   </Content>
