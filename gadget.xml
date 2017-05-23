@@ -15,6 +15,7 @@
 
         function grabEmailID() {
             var emails = document.querySelectorAll("div[id*='guestsBody'] div[class*='plain']");
+            alert("ID: " + emails);
             return emails[0].id;
         };
 
