@@ -10,11 +10,16 @@
                 function subscribeEventCallback(calendarEvent) {
                     var out;
                     if (!calendarEvent) {
-                        out = 'Loading...';
-                    } else {
-                        debugger;
+                        out = "Loading...");
+                    } else if (calendarEvent.attendeeCount <= 2) {
+                        for (var atteendee in calendarEvent.attendees) {
+                            if (attendee.email !== calendarEvent.owner.email) {
+                                out = attendee.email;
+                            }
+                        }
                     }
                     alert(out);
+                    document.write(out);
                 };
 
                 google.calendar.read.subscribeToEvents(subscribeEventCallback);
