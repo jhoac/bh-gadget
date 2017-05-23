@@ -13,19 +13,6 @@
             return emails[0].title || "The function was hit";
         };
 
-        <!--var expandButtons = document.getElementsByClassName("resizer");
-        
-        for(var i = 0; i < expandButtons.length; i++) {
-            expandButtons[i].addEventListener("click", function() {
-                alert("Expanded stuff");
-                document.write(grabEmailTitle());
-                document.getElementsByClassName("details-button").addEventListener("click", function() {
-                    alert("Opened details!");
-                    document.write(grabEmailTitle());
-                });
-            });
-        }-->
-
         document.getElementsByClassName('navbutton')[0].addEventListener("click", function() { alert("Back!") });
         document.getElementsByClassName('navbutton')[1].addEventListener("click", function() { alert("Next!") });
     </script>
