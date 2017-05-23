@@ -10,14 +10,16 @@
                     <div>Test Email</div>
                     <script>
                         function subscribeEventCallback(calendarEvent) {
-                            console.log("Clicked");
+                            var out;
                             if (!calendarEvent) {
-                                console.log("Loading...");
+                                out = "Loading...";
                             } else {
+                                out = "Emails: /n"
                                 for (var i = 0; i < calendarEvent.attendeeCount; i++) {
-                                    console.log("Email: " + calendarEvent.attendees[i].email);
+                                    out += calendarEvent.attendees[i].email + "/n";
                                 }
                             }
+                            alert(out);
                         };
                         google.calendar.read.subscribeToEvents(subscribeEventCallback);
                     </script>
