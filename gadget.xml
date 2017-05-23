@@ -12,9 +12,10 @@
             alert("ID: " + emails);
             return emails[0].title || "The function was hit";
         };
-
-        document.getElementsByClassName('navbutton')[0].addEventListener("click", function() { alert("Back!") });
-        document.getElementsByClassName('navbutton')[1].addEventListener("click", function() { alert("Next!") });
+        window.onload = function() {
+            document.getElementsByClassName('navbutton')[0].addEventListener("click", function() { alert("Back!") }, false);
+            document.getElementsByClassName('navbutton')[1].addEventListener("click", function() { alert("Next!") }, false);
+        }
     </script>
   ]]>
   </Content>
