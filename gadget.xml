@@ -14,9 +14,9 @@
                             if (!calendarEvent) {
                                 out = "Loading...";
                             } else {
-                                out = "Emails: /n"
+                                out = "Emails: "
                                 for (var i = 0; i < calendarEvent.attendeeCount; i++) {
-                                    out += calendarEvent.attendees[i].email + "/n";
+                                    out += calendarEvent.attendees[i].email + "\n        ";
                                 }
                             }
                             alert(out);
