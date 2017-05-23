@@ -12,14 +12,20 @@
             var supported_views = gadgets.views.getSupportedViews();
             gadgets.views.requestNavigateTo(supported_views[dest]);
         };
-        
+
         function grabEmailID() {
-            var emails = document.querySelector("div[id*='guestsBody'] div[class*='plain']");
+            var emails = document.querySelectorAll("div[id*='guestsBody'] div[class*='plain']");
             return emails[0].id;
         };
-        var span = document.createElement('span');
-        span.appendChild(document.createTextNode(grabEmailID()));
-        document.body.appendChild(span);
+
+        function produceMessage() {
+            var msg= 'Hello<br />';
+            return msg;
+        };
+        
+        document.write(produceMessage());
+        
+        document.write(grabEmailID());
     </script>
 
     <a href="javascript:goToView('canvas')" >Go to canvas view</a><br><br>
