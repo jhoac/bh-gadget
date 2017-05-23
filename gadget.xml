@@ -16,7 +16,6 @@
                             } else {
                                 for (var i = 0; i < calendarEvent.attendeeCount; i++) {
                                     console.log("Email: " + calendarEvent.attendees[i].email);
-                                    document.write(calendarEvent.attendees[i].email + "/n");
                                 }
                             }
                         };
