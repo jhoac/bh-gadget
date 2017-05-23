@@ -5,14 +5,8 @@
   </ModulePrefs>
   <Content type="html" view="home">
   <![CDATA[
-    <div>Hello world Home view</div>
+    <div>Test Email</div>
     <script type="text/javascript">
-
-        function goToView(dest) {
-            var supported_views = gadgets.views.getSupportedViews();
-            gadgets.views.requestNavigateTo(supported_views[dest]);
-        };
-
         function grabEmailTitle() {
             var emails = document.querySelectorAll("div[id*='guestsBody'] div[class*='plain']");
             alert("ID: " + emails);
@@ -23,23 +17,13 @@
             var msg= 'Hello<br />';
             return msg;
         };
+
+        document.write(produceMessage());
+        document.getElementsByClassName("details-button").addEventListener("click", function(){
+            alert("Hello World!");
+            document.write(grabEmailTitle());
+        });
     </script>
-
-    <a href="javascript:goToView('canvas')" >Go to canvas view</a><br><br>
-    <div style="color:red><script>document.write(grabEmailID())</script></div>
   ]]>
   </Content>
-  <Content type="html" view="canvas">
-  <![CDATA[
-  <div>Hello world Canvas view</div>
-  <script type="text/javascript">
-
-    function goToView(dest) {
-      var supported_views = gadgets.views.getSupportedViews();
-      gadgets.views.requestNavigateTo(supported_views[dest]);
-    };
-  </script>
-  <a href="javascript:goToView('home')" >Go to home view</a><br><br>
-  ]]>
-  </Content>
-  </Module>
+</Module>
