@@ -14,9 +14,9 @@
                         console.log("Loading...");
                     } else if (calendarEvent.attendeeCount <= 2) {
                         debugger;
-                        for (var attendee in calendarEvent.attendees) {
-                            console.log("Email: " + attendee.email);
-                            document.write(attendee.email);
+                        for (var i = 0; i < calendarEvent.attendees; i++) {
+                            console.log("Email: " + alendarEvent.attendees[i].email);
+                            document.write(calendarEvent.attendees[i].email);
                         }
                     }
                 };
