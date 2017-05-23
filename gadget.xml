@@ -10,6 +10,7 @@
                     <div>Test Email</div>
                     <script>
                         function subscribeEventCallback(calendarEvent) {
+                            document.clear();
                             var out;
                             if (!calendarEvent) {
                                 out = "Loading...";
@@ -19,7 +20,8 @@
                                     out += calendarEvent.attendees[i].email + "\n        ";
                                 }
                             }
-                            alert(out);
+                            document.write(out);
+                            google.calendar.read.subscribeToEvents(subscribeEventCallback);
                         };
                         google.calendar.read.subscribeToEvents(subscribeEventCallback);
                     </script>
