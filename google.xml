@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-    <ModulePrefs title="subscribeToEvents Test" height="200" author="me"
-    <Optional feature="google.calendar-0.5.read"/>
-    </ModulePrefs>
+    <ModulePrefs title="Subscribe Test" /> 
     <Content type="html">
         <![CDATA[
         <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
@@ -31,5 +30,5 @@
                 </body>
             </html>
         ]]>
-    </Content>
+    </Content> 
 </Module>
