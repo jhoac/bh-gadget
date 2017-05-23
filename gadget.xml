@@ -10,7 +10,6 @@
                     <div id="gadgetBody">Test Email</div>
                     <script>
                         function subscribeEventCallback(calendarEvent) {
-                            document.clear();
                             var out;
                             if (!calendarEvent) {
                                 out = "Loading...";
