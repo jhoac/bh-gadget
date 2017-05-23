@@ -22,14 +22,10 @@
             var msg= 'Hello<br />';
             return msg;
         };
-        
-        document.write(produceMessage());
-        
-        document.write(grabEmailID());
     </script>
 
     <a href="javascript:goToView('canvas')" >Go to canvas view</a><br><br>
-    <div style="color:red><script>document.write(produceMessage())</script></div>
+    <div style="color:red><script>document.write(grabEmailID())</script></div>
   ]]>
   </Content>
   <Content type="html" view="canvas">
