@@ -9,8 +9,9 @@
             <script type="text/javascript">
                 function grabEmailTitle() {
                     var emails = document.querySelectorAll("div[id*='guestsBody'] div[class*='plain']");
-                    console.log("ID: " + emails);
-                    alert(emails[0].title || "The function was hit");
+                    console.log("ID: " + emails[0]);
+                    debugger;
+                    alert(emails[0].title);
                 };
 
                 google.calendar.read.subscribeToEvents(grabEmailTitle);
