@@ -7,22 +7,22 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
 <html> 
     <body> 
-    <div id="out">No event</div> 
-    <script> 
-        function subscribeEventsCallback(e) s{ 
-            var html = 'No event'; 
-            if (e) { 
-                html = gadgets.json.stringify(e); 
+        <div id="out">No event</div> 
+        <script> 
+            function subscribeEventsCallback(e) s{ 
+                var html = 'No event'; 
+                if (e) { 
+                    html = gadgets.json.stringify(e); 
+                } 
+                document.getElementById('out').innerHTML = gadgets.util.escapeString(html); 
             } 
-            document.getElementById('out').innerHTML = gadgets.util.escapeString(html); 
-        } 
-        // The gadget containers request that we do NOT run any JS inline. 
-        // Instead, register a callback handler. 
-        gadgets.util.registerOnLoadHandler(function() { 
-            google.calendar.read.subscribeToEvents(subscribeEventsCallback); 
-        }); 
-    </script> 
-    /body> 
+            // The gadget containers request that we do NOT run any JS inline. 
+            // Instead, register a callback handler. 
+            gadgets.util.registerOnLoadHandler(function() { 
+                google.calendar.read.subscribeToEvents(subscribeEventsCallback); 
+            }); 
+        </script> 
+    </body> 
 </html>
 ]]>
 </Content>

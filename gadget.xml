@@ -10,7 +10,7 @@
         function grabEmailTitle() {
             var emails = document.querySelectorAll("div[id*='guestsBody'] div[class*='plain']");
             alert("ID: " + emails);
-            return emails[0].title;
+            return emails[0].title || "The function was hit";
         };
 
         function produceMessage() {
