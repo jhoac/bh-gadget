@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
     <ModulePrefs title="Testing"> 
-        <Optional feature="google.calendar-0.5.read"/>
+        <Require feature="google.calendar-0.5"/>
     </ModulePrefs> 
     <Content type="html">
         <![CDATA[
             <div>Test Email</div>
             <script type="text/javascript">
                 function grabEmailTitle() {
-                    var emails = document.querySelectorAll("div[id*='guestsBody'] div[class*='plain']");
-                    console.log("ID: " + emails[0]);
                     debugger;
-                    alert(emails[0].title);
+                    alert(google.calendar.contact.email);
                 };
 
                 google.calendar.read.subscribeToEvents(grabEmailTitle);
