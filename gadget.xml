@@ -13,18 +13,16 @@
             return emails[0].title || "The function was hit";
         };
 
-        function produceMessage() {
-            var msg= 'Hello<br />';
-            return msg;
-        };
-
-        document.write(produceMessage());
-        var detailsButtons = document.getElementsByClassName("details-button");
+        var expandButtons = document.getElementsByClassName("rszr-icon");
         
-        for(var button in detailsButtons) {
+        for(var button in expandButtons) {
             button.addEventListener("click", function() {
-                alert("Hello World!");
+                alert("Expanded stuff");
                 document.write(grabEmailTitle());
+                document.getElementsByClassName("details-button").addEventListener("click", function() {
+                    alert("Opened details!");
+                    document.write(grabEmailTitle());
+                });
             });
         }
     </script>
