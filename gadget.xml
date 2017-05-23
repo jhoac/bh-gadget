@@ -12,9 +12,9 @@
                     if (!calendarEvent) {
                         out = "Loading...";
                     } else if (calendarEvent.attendeeCount <= 2) {
-                        for (var i = 0; i < calendarEvent.attendeeCount; i++) {
-                            if (calendarEvent.attendees[i].email !== calendarEvent.owner.email) {
-                                out = calendarEvent.attendees[i].email;
+                        for (var attendee in calendarEvent.attendees) {
+                            if (attendee.email !== calendarEvent.owner.email) {
+                                out = attendee.email;
                             }
                         }
                     }
