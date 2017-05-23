@@ -10,25 +10,23 @@
                 <body>
                     <div id="out">No event</div>
                     <script>
-                        function subscribeEventsCallback(e) {
-                            var html = 'No event';
-                            if (e) {
-                                html = gadgets.json.stringify(e);
+                        function subscribeEventCallback(calendarEvent) {
+                            var out;
+                            if (!calendarEvent) {
+                                // No event is onscreen.
+                                out = 'No Event Onscreen!';
+                            } else {
+                                var out = '';
+                                if ('title' in calendarEvent) {
+                                    out += 'Title = ' + calendarEvent['title'] + '\n';
+                                }
+                                if ('location' in calendarEvent) {
+                                    out += 'Location = ' + calendarEvent['location'] + '\n';
+                                }
                             }
-                            document.getElementById('out').innerHTML = gadgets.util.escapeString(html);
+                            alert(out);
                         }
-
-                        ///https://www.google.com/calendar/b/1/render?gadgeturl=http://devblog.meeterapp.com/wp-content/uploads/2015/03/fess_subscribe_to_dates.xml#main_7
-                        // The gadget containers request that we do NOT run any JS inline.
-                        // Instead, register a callback handler.
-                        gadgets.util.registerOnLoadHandler(function() {
-                            google.calendar.read.subscribeToEvents(subscribeEventsCallback);
-                        });
-
-
-                        function showEvent(){
-                            google.calendar.showEvent(localEevent.id);
-                        }
+                        google.calendar.read.subscribeToEvents(subscribeEventCallback);
                     </script>
                 </body>
             </html>
