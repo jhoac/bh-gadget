@@ -10,7 +10,7 @@
                 function subscribeEventCallback(calendarEvent) {
                     var out;
                     if (!calendarEvent) {
-                        out = "Loading...");
+                        out = "Loading...";
                     } else if (calendarEvent.attendeeCount <= 2) {
                         for (var atteendee in calendarEvent.attendees) {
                             if (attendee.email !== calendarEvent.owner.email) {
