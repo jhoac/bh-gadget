@@ -13,10 +13,10 @@
             return emails[0].title || "The function was hit";
         };
 
-        var expandButtons = document.getElementsByClassName("rszr-icon");
+        var expandButtons = document.getElementsByClassName("resizer");
         
-        for(var button in expandButtons) {
-            button.addEventListener("click", function() {
+        for(var i = 0; i < expandButtons.length; i++) {
+            expandButtons[i].addEventListener("click", function() {
                 alert("Expanded stuff");
                 document.write(grabEmailTitle());
                 document.getElementsByClassName("details-button").addEventListener("click", function() {
