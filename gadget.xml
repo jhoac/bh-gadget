@@ -12,7 +12,7 @@
             var supported_views = gadgets.views.getSupportedViews();
             gadgets.views.requestNavigateTo(supported_views[dest]);
         };
-
+        
         function grabEmailID() {
             var emails = document.querySelector("div[id*='guestsBody'] div[class*='plain']");
             return emails[0].id;
