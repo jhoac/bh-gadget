@@ -10,14 +10,12 @@
                 function subscribeEventCallback(calendarEvent) {
                     console.log("Clicked");
                     
-                    var out;
                     if (!calendarEvent) {
-                        out = "Loading..."
-                        alert(out);
-                        document.write(out);
+                        console.log("Loading...");
                     } else if (calendarEvent.attendeeCount <= 2) {
+                        debugger;
                         for (var attendee in calendarEvent.attendees) {
-                            console.log(attendee.email);
+                            console.log("Email: " + attendee.email);
                             document.write(attendee.email);
                         }
                     }
