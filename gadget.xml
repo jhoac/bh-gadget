@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
     <ModulePrefs title="Testing"> 
+        <Require feature="dynamic-height"/>
         <Optional feature="google.calendar-0.5.read"/>
     </ModulePrefs> 
     <Content type="html">
         <![CDATA[
             <html>
                 <body>
-                    <div id="gadgetBody">Test Email</div>
+                    <div id="gadgetBody">Test Emails</div>
                     <script>
                         function subscribeEventCallback(calendarEvent) {
                             var out;
-                            if (!calendarEvent) {
-                                out = "Loading...";
-                            } else {
+                            if (calendarEvent) {
                                 out = "Emails: "
                                 for (var i = 0; i < calendarEvent.attendeeCount; i++) {
                                     out += calendarEvent.attendees[i].email + "\n        ";
                                 }
                             }
                             document.getElementById("gadgetBody").innerHTML = out;
+                            gadgets.window.adjustHeight();
                         };
                         google.calendar.read.subscribeToEvents(subscribeEventCallback);
                     </script>
