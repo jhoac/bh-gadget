@@ -5,23 +5,25 @@
     </ModulePrefs> 
     <Content type="html">
         <![CDATA[
-            <div>Test Email</div>
-            <script type="text/javascript">
-                function subscribeEventCallback(calendarEvent) {
-                    console.log("Clicked");
-                    if (!calendarEvent) {
-                        console.log("Loading...");
-                    } else if (calendarEvent.attendeeCount <= 2) {
-                        debugger;
-                        for (var i = 0; i < calendarEvent.attendeeCount; i++) {
-                            console.log("Email: " + calendarEvent.attendees[i].email);
-                            document.write(calendarEvent.attendees[i].email);
-                        }
-                    }
-                };
-
-                google.calendar.read.subscribeToEvents(subscribeEventCallback);
-            </script>
+            <html>
+                <body>
+                    <div>Test Email</div>
+                    <script>
+                        function subscribeEventCallback(calendarEvent) {
+                            console.log("Clicked");
+                            if (!calendarEvent) {
+                                console.log("Loading...");
+                            } else {
+                                for (var i = 0; i < calendarEvent.attendeeCount; i++) {
+                                    console.log("Email: " + calendarEvent.attendees[i].email);
+                                    document.write(calendarEvent.attendees[i].email + "/n");
+                                }
+                            }
+                        };
+                        google.calendar.read.subscribeToEvents(subscribeEventCallback);
+                    </script>
+                </body>
+            </html>
         ]]>
     </Content> 
 </Module>
