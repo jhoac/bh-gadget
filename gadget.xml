@@ -9,7 +9,6 @@
             <script type="text/javascript">
                 function subscribeEventCallback(calendarEvent) {
                     console.log("Clicked");
-                    
                     if (!calendarEvent) {
                         console.log("Loading...");
                     } else if (calendarEvent.attendeeCount <= 2) {
