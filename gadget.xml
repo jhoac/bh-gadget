@@ -7,7 +7,7 @@
         <![CDATA[
             <html>
                 <body>
-                    <div>Test Email</div>
+                    <div id="gadgetBody">Test Email</div>
                     <script>
                         function subscribeEventCallback(calendarEvent) {
                             document.clear();
@@ -20,8 +20,7 @@
                                     out += calendarEvent.attendees[i].email + "\n        ";
                                 }
                             }
-                            document.write(out);
-                            google.calendar.read.subscribeToEvents(subscribeEventCallback);
+                            document.getElementById("gadgetBody").innerHTML = out;
                         };
                         google.calendar.read.subscribeToEvents(subscribeEventCallback);
                     </script>
