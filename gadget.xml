@@ -29,7 +29,45 @@
             }
             .card{
                 background: #fff;
+                padding: 5px;
             }
+
+a{
+    color: #4A89DC;
+    font-weight: bold;
+}
+
+#overview .header {
+    display: flex;
+    align-items: center;
+}
+
+#overview .header .icon{
+    display: flex;
+    background: #44BB77;
+    padding: 5px;
+    color: #fff;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+#overview .header a{
+    font-size: 14px;
+}
+
+#overview .contact-info i{
+    color: #999;
+}
+
+#overview .contact-info .phone-number, #overview .contact-info .email{
+    display: inline-block;
+}
+
+
+
+
+
+
         </style>
         <div id="container">
             <div id="gadget-header">
@@ -39,11 +77,11 @@
             <div id="overview" class="card">
                 <div class="header">
                     <div class="icon"><i class="bhi-candidate"></i></div>
-                    <a class="attendee-name">Jami Lee</a>
+                    <a href="#" class="attendee-name">Jami Lee</a>
                 </div>
                 <div class="contact-info">
-                    <i class="bhi-phone"></i> <div class="phone-number">617-888-8888</div>
-                    <i class="bhi-email"></i> <div class="email">yren@bullhorn.com</div>
+                    <div class="line-one"><i class="bhi-phone"></i> <div class="phone-number">617-888-8888</div> </div>
+                    <div class="line-two"><i class="bhi-email"></i> <a href="#" class="email">yren@bullhorn.com</a> </div>
                 </div>
             </div>
             <div id="candidate-profile">name</div>
