@@ -9,17 +9,23 @@
             <html>
                 <body>
                     <div id="gadgetBody">Emails:</div>
-                    <div id="record">Emails:</div>
+                    <div id="record"></div>
                     <script>
                         function subscribeEventCallback(calendarEvent) {
-                            var record;
+                            var record,
+                                recordSection = document.getElementById("record");
                             if (calendarEvent) {
+                                while(recordSection.hasChildNodes()) {
+                                    recordSection.removeChild(recordSection.lastChild);
+                                }
+
                                 for (var i = 0; i < calendarEvent.attendeeCount; i++) {
                                     record = document.createElement('div');
                                     record.id = 'record' + i;
                                     record.className = 'record';
+                                    debugger;
                                     record.appendChild(document.createTextNode(calendarEvent.attendees[i].name + "\n" + calendarEvent.attendees[i].email + "\n"));
-                                    document.getElementById("record").appendChild(record);
+                                    recordSection.appendChild(record);
                                 }
                                 gadgets.window.adjustHeight();
                             }
