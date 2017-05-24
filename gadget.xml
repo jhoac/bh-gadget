@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-    <ModulePrefs title="Testing"> 
+    <ModulePrefs title="Bullhorn"
+        title_url="http://www.bullhornstaffing.com"> 
         <Require feature="dynamic-height"/>
         <Optional feature="google.calendar-0.5.read"/>
     </ModulePrefs> 
