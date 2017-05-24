@@ -6,7 +6,7 @@
     </ModulePrefs> 
     <Content type="html">
         <![CDATA[
-            <html>
+<html>
     <head>
         <title style="float:left;">Where does this go?<title>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -14,6 +14,9 @@
     <body>
         <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
+        body, td, div, span, p {
+            font-family: 'Roboto', sans-serif!important;
+        }
         #container{
             background: #eee;
             font-family: 'Roboto', sans-serif!important;
