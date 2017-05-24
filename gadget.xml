@@ -7,42 +7,42 @@
     <Content type="html">
         <![CDATA[
             <html>
-                <head>
-                    <title style="float:left;">Where does this go?<title>
-                    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-                </head>
-                <body>
-                    <style>
-                    @import url('https://fonts.googleapis.com/css?family=Roboto');
-                    #container{
-                        background: #eee;
-                        font-family: 'Roboto', sans-serif;
+    <head>
+        <title style="float:left;">Where does this go?<title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+        #container{
+            background: #eee;
+            font-family: 'Roboto', sans-serif!important;
+        }
+
+        </style>
+        <div id="container">
+            <div id="header">
+
+            </div>
+            <div id="gadgetBody">Test Emails</div>
+            <div id="candidate-profile">name</div>
+        </div>
+        <script>
+            function subscribeEventCallback(calendarEvent) {
+                var out;
+                if (calendarEvent) {
+                    out = "Emails: "
+                    for (var i = 0; i < calendarEvent.attendeeCount; i++) {
+                        out += calendarEvent.attendees[i].email + "\n        ";
                     }
-
-                    </style>
-                    <div id="container">
-                        <div id="header">
-
-                        </div>
-                        <div id="gadgetBody">Test Emails</div>
-                        <div id="candidate-profile">name</div>
-                    </div>
-                    <script>
-                        function subscribeEventCallback(calendarEvent) {
-                            var out;
-                            if (calendarEvent) {
-                                out = "Emails: "
-                                for (var i = 0; i < calendarEvent.attendeeCount; i++) {
-                                    out += calendarEvent.attendees[i].email + "\n        ";
-                                }
-                                document.getElementById("gadgetBody").innerHTML = out;
-                                gadgets.window.adjustHeight();
-                            }
-                        };
-                        google.calendar.read.subscribeToEvents(subscribeEventCallback);
-                    </script>
-                </body>
-            </html>
+                    document.getElementById("gadgetBody").innerHTML = out;
+                    gadgets.window.adjustHeight();
+                }
+            };
+            google.calendar.read.subscribeToEvents(subscribeEventCallback);
+        </script>
+    </body>
+</html>
         ]]>
     </Content> 
 </Module>
