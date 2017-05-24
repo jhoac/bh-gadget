@@ -13,16 +13,6 @@
         <link href="https://rawgit.com/bullhorn/bullhorn-icons/development/fonts/Bullhorn-Glyphicons.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <style>
-        body, td, div, span, p {
-            font-family: 'Roboto', sans-serif!important;
-        }
-        #container{
-            background: #eee;
-            font-family: 'Roboto', sans-serif!important;
-        }
-
-        </style>
         <div id="container">
             <div id="header">
             <i class="bhi-add-appointment"></i>
