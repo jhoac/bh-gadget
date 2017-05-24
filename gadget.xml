@@ -89,7 +89,7 @@ a{
                     <div class="line-two"><i class="bhi-email"></i> <a href="#" class="email">yren@bullhorn.com</a> </div>
                 </div>
             </div>
-            <div id="candidate-profile">name</div>
+            <div id="candidate-profile"></div>
         </div>
         <div id="gadgetBody">Test Emails</div>
         <script>
