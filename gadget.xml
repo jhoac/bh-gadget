@@ -12,6 +12,7 @@
                 </head>
                 <body>
                     <div id="gadgetBody">Test Emails</div>
+                    <div id="candidate-profile">name</div>
                     <script>
                         function subscribeEventCallback(calendarEvent) {
                             var out;
