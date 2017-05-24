@@ -7,6 +7,9 @@
     <Content type="html">
         <![CDATA[
             <html>
+                <style>
+                    div > span { border-bottome: 1px solid; }
+                </style>
                 <body>
                     <div id="gadgetBody">Emails:</div>
                     <div id="record"></div>
@@ -20,7 +23,7 @@
                                 }
 
                                 for (var i = 0; i < calendarEvent.attendeeCount; i++) {
-                                    record = document.createElement('div');
+                                    record = document.createElement('span');
                                     record.id = 'record' + i;
                                     record.className = 'record';
                                     record.appendChild(document.createTextNode(calendarEvent.attendees[i].email + "\n"));
