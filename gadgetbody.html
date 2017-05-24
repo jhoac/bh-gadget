@@ -32,6 +32,7 @@ a{
 #overview .header {
     display: flex;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 #overview .header .icon{
@@ -51,6 +52,10 @@ a{
     color: #999;
 }
 
+#overview .contact-info .line-one{
+    margin-bottom: 5px;
+}
+
 #overview .contact-info .phone-number, #overview .contact-info .email{
     display: inline-block;
 }
@@ -65,7 +70,7 @@ a{
             <div id="gadget-header">
                 <img src="https://raw.githubusercontent.com/jhoac/bh-gadget/styling/images/logo.png"/>
             </div>
-            <div id="gadgetBody">Test Emails</div>
+            
             <div id="overview" class="card">
                 <div class="header">
                     <div class="icon"><i class="bhi-candidate"></i></div>
@@ -78,6 +83,7 @@ a{
             </div>
             <div id="candidate-profile">name</div>
         </div>
+        <div id="gadgetBody">Test Emails</div>
         <script>
             function subscribeEventCallback(calendarEvent) {
                 var out;
