@@ -9,10 +9,24 @@
             <html>
                 <head>
                     <title style="float:left;">Where does this go?<title>
+                    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
                 </head>
                 <body>
-                    <div id="gadgetBody">Test Emails</div>
-                    <div id="candidate-profile">name</div>
+                    <style>
+                    @import url('https://fonts.googleapis.com/css?family=Roboto');
+                    #container{
+                        background: #eee;
+                        font-family: 'Roboto', sans-serif;
+                    }
+
+                    </style>
+                    <div id="container">
+                        <div id="header">
+
+                        </div>
+                        <div id="gadgetBody">Test Emails</div>
+                        <div id="candidate-profile">name</div>
+                    </div>
                     <script>
                         function subscribeEventCallback(calendarEvent) {
                             var out;
