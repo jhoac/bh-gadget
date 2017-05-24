@@ -5,3 +5,7 @@ body, td, div, span, p {
     background: #eee;
     font-family: 'Roboto', sans-serif!important;
 }
+
+#gadget-header{
+	background: #0B344F;
+}
