@@ -8,17 +8,19 @@
         <![CDATA[
             <html>
                 <body>
-                    <div id="gadgetBody">Test Email</div>
-                    <div id="record">{{ records[0].name }} - {{ records[0].email }}</div>
+                    <div id="gadgetBody">Emails:</div>
+                    <div id="record">Emails:</div>
                     <script>
                         function subscribeEventCallback(calendarEvent) {
-                            var out;
+                            var record;
                             if (calendarEvent) {
-                                out = "Emails: "
                                 for (var i = 0; i < calendarEvent.attendeeCount; i++) {
-                                    $scope.records.push({ name: calendarEvent.attendees[i].name, email: calendarEvent.attendees[i].email})
+                                    record = document.createElement('div');
+                                    record.id = 'record' + i;
+                                    record.className = 'record';
+                                    record.appendChild(document.createTextNode(calendarEvent.attendees[i].name + "\n" + calendarEvent.attendees[i].email + "\n"));
+                                    document.getElementById("record").appendChild(record);
                                 }
-                                document.getElementById("gadgetBody").innerHTML = out;
                                 gadgets.window.adjustHeight();
                             }
                         };
