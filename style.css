@@ -31,7 +31,10 @@ a{
     display: flex;
     align-items: center;
     padding-bottom: 10px;
+    font-size: 14px;
 }
+
+
 
 #overview .header .icon{
     display: flex;
@@ -58,21 +61,20 @@ a{
     display: inline-block;
 }
 
-#recent-notes .header{
-    font-size: 14px;
+.card .header{
     padding-top: 5px
 }
 
-#recent-notes i{
+#recent-notes i, #recent-subs i{
     color: #999;
     margin-right: 5px;
 }
 
-#recent-notes .note{
+#recent-notes .note, #recent-subs .sub{
     padding-bottom: 10px;
 }
 
-#recent-notes .note + .note{
+#recent-notes .note + .note, #recent-subs .sub + .sub{
    border-top: 1px solid #ddd;
    padding-top: 10px;
 }
@@ -81,8 +83,27 @@ a{
     padding-bottom: 5px
 }
 
-#recent-notes .view-all{
+.card .view-all{
     text-align: center;
     border-top: 1px solid #ddd;
     padding: 5px
+}
+
+#recent-subs .job{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+#recent-subs .job .icon{
+    display: flex;
+    background: #BB5566;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+#recent-subs .job .icon i{
+    color: #fff;
+    margin-right: 0;
 }
