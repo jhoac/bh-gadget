@@ -18,6 +18,12 @@ body{
 #container{
     background: #EEE;
     width: 162px;
+    font-family: 'Roboto', sans-serif!important;
+    font-size: 13px;
+}
+
+#container *{
+    font-family: 'Roboto', sans-serif!important;
 }
 
 #gadget-header {
@@ -151,6 +157,7 @@ a{
 }
 
 #before-click, #not-in-bullhorn{
+    padding: 15px;
     text-align: center;
 }
 
