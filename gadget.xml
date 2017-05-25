@@ -6,108 +6,48 @@
     </ModulePrefs> 
     <Content type="html">
         <![CDATA[
-<html>
-    <head>
-        <title style="float:left;">Where does this go?<title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="https://rawgit.com/bullhorn/bullhorn-icons/development/fonts/Bullhorn-Glyphicons.css" rel="stylesheet" type="text/css">
-        <link href="https://raw.githubusercontent.com/jhoac/bh-gadget/styling/style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <style>
-            body, td, div, span, p {
-                font-family: 'Roboto', sans-serif!important;
-                font-size: 13px;
-            }
-            #container{
-                background: #EEE
-            }
-
-            #gadget-header {
-                background: #0B344F;
-                padding: 5px 10px;
-            }
-            .card{
-                background: #fff;
-                padding: 5px;
-            }
-
-a{
-    color: #4A89DC;
-    font-weight: bold;
-}
-
-#overview .header {
-    display: flex;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-#overview .header .icon{
-    display: flex;
-    background: #44BB77;
-    padding: 5px;
-    color: #fff;
-    margin-right: 5px;
-    border-radius: 5px;
-}
-
-#overview .header a{
-    font-size: 14px;
-}
-
-#overview .contact-info i{
-    color: #999;
-}
-
-#overview .contact-info .line-one{
-    margin-bottom: 5px;
-}
-
-#overview .contact-info .phone-number, #overview .contact-info .email{
-    display: inline-block;
-}
-
-
-
-
-
-
-        </style>
-        <div id="container">
-            <div id="gadget-header">
-                <img src="https://raw.githubusercontent.com/jhoac/bh-gadget/styling/images/logo.png"/>
-            </div>
-            
-            <div id="overview" class="card">
-                <div class="header">
-                    <div class="icon"><i class="bhi-candidate"></i></div>
-                    <a href="#" class="attendee-name">Jami Lee</a>
-                </div>
-                <div class="contact-info">
-                    <div class="line-one"><i class="bhi-phone"></i> <div class="phone-number">617-888-8888</div> </div>
-                    <div class="line-two"><i class="bhi-email"></i> <a href="#" class="email">yren@bullhorn.com</a> </div>
-                </div>
-            </div>
-            <div id="candidate-profile"></div>
-        </div>
-        <div id="gadgetBody">Test Emails</div>
-        <script>
-            function subscribeEventCallback(calendarEvent) {
-                var out;
-                if (calendarEvent) {
-                    out = "Emails: "
-                    for (var i = 0; i < calendarEvent.attendeeCount; i++) {
-                        out += calendarEvent.attendees[i].email + "\n        ";
-                    }
-                    document.getElementById("gadgetBody").innerHTML = out;
-                    gadgets.window.adjustHeight();
-                }
-            };
-            google.calendar.read.subscribeToEvents(subscribeEventCallback);
-        </script>
-    </body>
-</html>
+            <html>
+                <head>
+                    <title style="float:left;">Where does this go?<title>
+                    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+                    <link href="https://rawgit.com/bullhorn/bullhorn-icons/development/fonts/Bullhorn-Glyphicons.css" rel="stylesheet" type="text/css">
+                    <link href="https://raw.githubusercontent.com/jhoac/bh-gadget/styling/style.css" rel="stylesheet" type="text/css">
+                </head>
+                <body>
+                    <div id="container">
+                        <div id="gadget-header">
+                            <img src="https://raw.githubusercontent.com/jhoac/bh-gadget/styling/images/logo.png"/>
+                        </div>
+                        
+                        <div id="overview" class="card">
+                            <div class="header">
+                                <div class="icon"><i class="bhi-candidate"></i></div>
+                                <a href="#" class="attendee-name">Jami Lee</a>
+                            </div>
+                            <div class="contact-info">
+                                <div class="line-one"><i class="bhi-phone"></i> <div class="phone-number">617-888-8888</div> </div>
+                                <div class="line-two"><i class="bhi-email"></i> <a href="#" class="email">yren@bullhorn.com</a> </div>
+                            </div>
+                        </div>
+                        <div id="candidate-profile"></div>
+                    </div>
+                    <div id="gadgetBody">Test Emails</div>
+                    <script>
+                        function subscribeEventCallback(calendarEvent) {
+                            var out;
+                            if (calendarEvent) {
+                                out = "Emails: "
+                                for (var i = 0; i < calendarEvent.attendeeCount; i++) {
+                                    out += calendarEvent.attendees[i].email + "\n        ";
+                                }
+                                document.getElementById("gadgetBody").innerHTML = out;
+                                gadgets.window.adjustHeight();
+                            }
+                        };
+                        google.calendar.read.subscribeToEvents(subscribeEventCallback);
+                    </script>
+                </body>
+            </html>
         ]]>
     </Content> 
 </Module>

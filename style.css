@@ -1,11 +1,51 @@
 body, td, div, span, p {
     font-family: 'Roboto', sans-serif!important;
+    font-size: 13px;
 }
 #container{
-    background: #eee;
-    font-family: 'Roboto', sans-serif!important;
+    background: #EEE
 }
 
-#gadget-header{
-	background: #0B344F;
+#gadget-header {
+    background: #0B344F;
+    padding: 5px 10px;
+}
+.card{
+    background: #fff;
+    padding: 5px;
+}
+a{
+    color: #4A89DC;
+    font-weight: bold;
+}
+
+#overview .header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#overview .header .icon{
+    display: flex;
+    background: #44BB77;
+    padding: 5px;
+    color: #fff;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+#overview .header a{
+    font-size: 14px;
+}
+
+#overview .contact-info i{
+    color: #999;
+}
+
+#overview .contact-info .line-one{
+    margin-bottom: 5px;
+}
+
+#overview .contact-info .phone-number, #overview .contact-info .email{
+    display: inline-block;
 }
