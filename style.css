@@ -17,7 +17,7 @@ body{
 }
 #container{
     background: #EEE;
-    width: 100%;
+    width: 162px;
 }
 
 #gadget-header {
@@ -44,7 +44,7 @@ a{
 }
 
 #overview{
-	padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 #overview .header .icon{
@@ -62,10 +62,13 @@ a{
 
 #overview .contact-info i{
     color: #999;
+    margin-right: 5px;
 }
 
 #overview .contact-info .line-one{
     margin-bottom: 5px;
+    display: flex;
+    align-items: center;
 }
 
 #overview .contact-info .line-two{
@@ -76,6 +79,10 @@ a{
 
 #overview .contact-info .phone-number, #overview .contact-info .email{
     display: inline-block;
+    max-width: 120px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .card .header{
@@ -134,6 +141,13 @@ a{
     display: flex;
     align-items: center;
     padding-bottom: 5px;
+}
+
+#resumes .file-name {
+    max-width: 120px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #before-click, #not-in-bullhorn{
