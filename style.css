@@ -17,9 +17,9 @@ body{
 }
 #container{
     background: #EEE;
-    width: 162px;
     font-family: 'Roboto', sans-serif!important;
     font-size: 13px;
+    min-height: 1000px;
 }
 
 #container *{
@@ -85,7 +85,7 @@ a{
 
 #overview .contact-info .phone-number, #overview .contact-info .email{
     display: inline-block;
-    max-width: 120px;
+    max-width: 110px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -113,6 +113,27 @@ a{
     padding-bottom: 5px
 }
 
+#recent-notes .note-info{
+    color: #999;
+}
+
+#recent-notes .note-info > div + div {
+    margin-top: 5px;
+}
+
+#recent-notes .note-info > div{
+    display: flex;
+    align-items: center;
+}
+
+#recent-notes .type-name, #recent-notes .user-name, #recent-notes .added-date{
+    max-width: 110px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
 .card .view-all{
     text-align: center;
     border-top: 1px solid #ddd;
@@ -133,6 +154,28 @@ a{
     border-radius: 5px;
 }
 
+#recent-subs .job-info{
+    color: #999;
+}
+
+#recent-subs .job-info > div + div {
+    margin-top: 5px;
+}
+
+#recent-subs .job-info > div{
+    display: flex;
+    align-items: center;
+}
+
+#recent-subs .status-name, #recent-subs .user-name, #recent-subs .added-date{
+    max-width: 110px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+
 #recent-subs .job .icon i{
     color: #fff;
     margin-right: 0;
@@ -150,14 +193,13 @@ a{
 }
 
 #resumes .file-name {
-    max-width: 120px;
+    max-width: 110px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
 
 #before-click, #not-in-bullhorn{
-    padding: 15px;
     text-align: center;
 }
 
@@ -165,3 +207,4 @@ a{
     font-size: 20px;
     color: #999;
 }
+
