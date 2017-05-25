@@ -2,9 +2,18 @@
     box-sizing:border-box;
 }
 
+html{
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 body{
     font-family: 'Roboto', sans-serif!important;
     font-size: 13px;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 #container{
     background: #EEE;
