@@ -34,7 +34,9 @@ a{
     font-size: 14px;
 }
 
-
+#overview{
+	padding-bottom: 10px;
+}
 
 #overview .header .icon{
     display: flex;
