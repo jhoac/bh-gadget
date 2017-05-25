@@ -124,3 +124,14 @@ a{
     color: #fff;
     margin-right: 0;
 }
+
+#resumes i{
+    color: #999;
+    margin-right: 5px;
+}
+
+#resumes .resume{
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}

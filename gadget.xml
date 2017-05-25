@@ -6,7 +6,7 @@
     </ModulePrefs> 
     <Content type="html">
         <![CDATA[
-        <html>
+<html>
     <head>
         <title style="float:left;">Where does this go?</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -65,7 +65,7 @@
             <div id="recent-subs" class="card">
                 <div class="header">
                     <div class="icon"><i class="bhi-star-o"></i></div>
-                    <div>Recent Submissions</div>
+                    <div>Submissions</div>
                 </div>
                 <div class="subs-list">
                     <div class="sub">
@@ -103,6 +103,15 @@
                     </div>
                 </div>
                 <div class="view-all"><a href="#">VIEW ALL</a></div>
+            </div>
+        </div>
+        <div id="resumes" class="card">
+            <div class="header">
+                <div class="icon"><i class="bhi-note"></i></div>
+                <div>Resumes</div>
+            </div>
+            <div class="resumes-list">
+                <div class="resume">
             </div>
         </div>
         <div id="gadgetBody">Test Emails</div>
