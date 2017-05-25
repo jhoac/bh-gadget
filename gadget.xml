@@ -7,47 +7,121 @@
     <Content type="html">
         <![CDATA[
         <html>
-            <head>
-                <title style="float:left;">Where does this go?<title>
-                <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-                <link href="https://rawgit.com/bullhorn/bullhorn-icons/development/fonts/Bullhorn-Glyphicons.css" rel="stylesheet" type="text/css">
-                <link href="https://rawgit.com/jhoac/bh-gadget/styling/style.css" rel="stylesheet" type="text/css">
-            </head>
-            <body>
-                <div id="container">
-                    <div id="gadget-header">
-                        <img src="https://raw.githubusercontent.com/jhoac/bh-gadget/styling/images/logo.png"/>
-                    </div>
-                    
-                    <div id="overview" class="card">
-                        <div class="header">
-                            <div class="icon"><i class="bhi-candidate"></i></div>
-                            <a href="#" class="attendee-name">Jami Lee</a>
-                        </div>
-                        <div class="contact-info">
-                            <div class="line-one"><i class="bhi-phone"></i> <div class="phone-number">617-888-8888</div> </div>
-                            <div class="line-two"><i class="bhi-email"></i> <a href="#" class="email">yren@bullhorn.com</a> </div>
-                        </div>
-                    </div>
-                    <div id="candidate-profile"></div>
+    <head>
+        <title style="float:left;">Where does this go?</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://rawgit.com/bullhorn/bullhorn-icons/development/fonts/Bullhorn-Glyphicons.css" rel="stylesheet" type="text/css">
+        <link href="https://rawgit.com/jhoac/bh-gadget/styling/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="gadget-header">
+                <img src="https://raw.githubusercontent.com/jhoac/bh-gadget/styling/images/logo.png"/>
+            </div>
+            
+            <div id="overview" class="card">
+                <div class="header">
+                    <div class="icon"><i class="bhi-candidate"></i></div>
+                    <a href="#" class="attendee-name">Jami Lee</a>
                 </div>
-                <div id="gadgetBody">Test Emails</div>
-                <script>
-                    function subscribeEventCallback(calendarEvent) {
-                        var out;
-                        if (calendarEvent) {
-                            out = "Emails: "
-                            for (var i = 0; i < calendarEvent.attendeeCount; i++) {
-                                out += calendarEvent.attendees[i].email + "\n        ";
-                            }
-                            document.getElementById("gadgetBody").innerHTML = out;
-                            gadgets.window.adjustHeight();
-                        }
-                    };
-                    google.calendar.read.subscribeToEvents(subscribeEventCallback);
-                </script>
-            </body>
-        </html>
+                <div class="contact-info">
+                    <div class="line-one"><i class="bhi-phone"></i> <div class="phone-number">617-888-8888</div> </div>
+                    <div class="line-two"><i class="bhi-email"></i> <a href="#" class="email">yren@bullhorn.com</a> </div>
+                </div>
+            </div>
+            <div id="recent-notes" class="card">
+                <div class="header">
+                    <div class="icon"><i class="bhi-note"></i></div>
+                    <div>Recent Notes</div>
+                </div>
+                <div class="notes-list">
+                    <div class="note">
+                        <div class="content">Jami is interested in the Liberty Mutual Java Developer job, will set up a call.</div>
+                        <div class="note-info">
+                            <div class="type"><i class="bhi-info"></i> <span class="type-name"> Screened</span></div>
+                            <div class="user"><i class="bhi-user-o"></i> <span class="user-name"> John Baptise</span></div>
+                            <div class="date"><i class="bhi-calendar"></i> <span class="added-date"> May 20, 2017</span></div>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <div class="content">Jami is interested in the Liberty Mutual Java Developer job, will set up a call.</div>
+                        <div class="note-info">
+                            <div class="type"><i class="bhi-info"></i> <span class="type-name"> Screened</span></div>
+                            <div class="user"><i class="bhi-user-o"></i> <span class="user-name"> John Baptise</span></div>
+                            <div class="date"><i class="bhi-calendar"></i> <span class="added-date"> May 20, 2017</span></div>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <div class="content">Jami is interested in the Liberty Mutual Java Developer job, will set up a call.</div>
+                        <div class="note-info">
+                            <div class="type"><i class="bhi-info"></i> <span class="type-name"> Screened</span></div>
+                            <div class="user"><i class="bhi-user-o"></i> <span class="user-name"> John Baptise</span></div>
+                            <div class="date"><i class="bhi-calendar"></i> <span class="added-date"> May 20, 2017</span></div>
+                        </div>
+                    </div>
+                    <div class="view-all"><a href="#">VIEW ALL</a></div>
+                </div>
+            </div>
+            <div id="recent-subs" class="card">
+                <div class="header">
+                    <div class="icon"><i class="bhi-star-o"></i></div>
+                    <div>Recent Submissions</div>
+                </div>
+                <div class="subs-list">
+                    <div class="sub">
+                        <div class="job">
+                            <div class="icon"><i class="bhi-job"></i></div>
+                            <a href="#"><span class="job-id"></span> <span class="job-title">Java Developer</span></a>
+                        </div>
+                        <div class="job-info">
+                            <div class="status"><i class="bhi-info"></i> <span class="status-name"> Screened</span></div>
+                            <div class="user"><i class="bhi-user-o"></i> <span class="user-name"> John Baptise</span></div>
+                            <div class="date"><i class="bhi-calendar"></i> <span class="added-date"> May 20, 2017</span></div>
+                        </div>
+                    </div>
+                    <div class="sub">
+                        <div class="job">
+                            <div class="icon"><i class="bhi-job"></i></div>
+                            <a href="#"><span class="job-id"></span> <span class="job-title">Java Developer</span></a>
+                        </div>
+                        <div class="job-info">
+                            <div class="status"><i class="bhi-info"></i> <span class="status-name"> Screened</span></div>
+                            <div class="user"><i class="bhi-user-o"></i> <span class="user-name"> John Baptise</span></div>
+                            <div class="date"><i class="bhi-calendar"></i> <span class="added-date"> May 20, 2017</span></div>
+                        </div>
+                    </div>
+                    <div class="sub">
+                        <div class="job">
+                            <div class="icon"><i class="bhi-job"></i></div>
+                            <a href="#"><span class="job-id"></span> <span class="job-title">Java Developer</span></a>
+                        </div>
+                        <div class="job-info">
+                            <div class="status"><i class="bhi-info"></i> <span class="status-name"> Screened</span></div>
+                            <div class="user"><i class="bhi-user-o"></i> <span class="user-name"> John Baptise</span></div>
+                            <div class="date"><i class="bhi-calendar"></i> <span class="added-date"> May 20, 2017</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all"><a href="#">VIEW ALL</a></div>
+            </div>
+        </div>
+        <div id="gadgetBody">Test Emails</div>
+        <script>
+            function subscribeEventCallback(calendarEvent) {
+                var out;
+                if (calendarEvent) {
+                    out = "Emails: "
+                    for (var i = 0; i < calendarEvent.attendeeCount; i++) {
+                        out += calendarEvent.attendees[i].email + "\n        ";
+                    }
+                    document.getElementById("gadgetBody").innerHTML = out;
+                    gadgets.window.adjustHeight();
+                }
+            };
+            google.calendar.read.subscribeToEvents(subscribeEventCallback);
+        </script>
+    </body>
+</html>
         ]]>
     </Content> 
 </Module>
